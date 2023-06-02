@@ -35,8 +35,6 @@ df = pd.DataFrame(data = iris.data, columns = iris.feature_names)
 
 st.dataframe(df)
 
-st.test(df.info())
-
 st.write(df.describe())
 feature = st.selectbox('Select a feature', df.columns)
 
