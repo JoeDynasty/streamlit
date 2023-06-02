@@ -12,7 +12,7 @@ data = {
   'Name': ['John', 'Lisa', 'Max', 'Chris']
 }
 
-df.pd.DataFrame(data)
+df = pd.DataFrame(data)
 
 age = st.slider('your age', min_value = 0, max_value = 100) # Returns the value sected by the user
 
