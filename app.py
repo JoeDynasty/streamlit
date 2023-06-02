@@ -1,11 +1,11 @@
 import streamlit as st
+import pandas as pd
+from sklean import datasets
 st.title("My CE App") # Set the title of your page
 st.header('Data Visulization Section') # Set a header for a section 
 st.subheader('Subsection: Pie Chart Analysis') # Sets subheader for a subsection 
 st.text('This section focuses on data proprocessing.') 
 st.markdown('**This is some bold text**')
-
-import pandas as pd
 
 data = {
   'Age': [45, 55, 56, 67],
@@ -23,3 +23,19 @@ show_df = st.checkbox('Show DataFrame')
              
 if show_df:
   st.write(df)
+
+df['Adult'] = df['Age'].apply(lambda x: 'Yes' if x >= 18 else 'No')
+
+st.dataframe(df)
+
+iris = datasets.load_iris()
+df = pd.DataFrame(data = iris.data, columns = iris.feature_names)
+
+st.dataframe(df)
+
+st.test(df.info())
+
+st.write(df.describe())
+feature = st.selectbox('Select a feature', df.columns)
+
+st.hist(df[feature])
