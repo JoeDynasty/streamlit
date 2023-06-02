@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklean import datasets
+from sklearn import datasets
 st.title("My CE App") # Set the title of your page
 st.header('Data Visulization Section') # Set a header for a section 
 st.subheader('Subsection: Pie Chart Analysis') # Sets subheader for a subsection 
