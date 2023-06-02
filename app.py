@@ -39,7 +39,7 @@ st.write(df.describe())
 feature = st.selectbox('Select a feature', df.columns)
 
 fig, ax = plt.subplots()
-ax.his(df[feature], bins = 20)
+ax.hist(df[feature], bins = 20)
 
 ax.set_title(f'Histogram of {feature}')
 ax.set_xlabel(feature)
