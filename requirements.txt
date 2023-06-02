@@ -9,3 +9,5 @@ joblib
 tensorflow
 torch
 transformers
+matplotlib
+seaborn
